@@ -128,6 +128,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/lge/bullhead/sec_config:system/etc/sec_config
 
+PRODUCT_PACKAGES += \
+    android.hardware.gnss@1.0-service \
+
 # NFC config files
 PRODUCT_COPY_FILES += \
     device/lge/bullhead/nfc/libnfc-brcm.conf:system/etc/libnfc-brcm.conf \
