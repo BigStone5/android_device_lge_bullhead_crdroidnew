@@ -128,9 +128,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/lge/bullhead/sec_config:system/etc/sec_config
 
-PRODUCT_PACKAGES += \
-    android.hardware.gnss@1.0-service \
-
 # NFC config files
 PRODUCT_COPY_FILES += \
     device/lge/bullhead/nfc/libnfc-brcm.conf:system/etc/libnfc-brcm.conf \
@@ -244,9 +241,6 @@ PRODUCT_COPY_FILES += \
 # GPS
 PRODUCT_PACKAGES += \
     libgps.utils \
-    libloc_core \
-    libloc_eng \
-    libloc_api_v02 \
     gps.msm8992
 
 # NFC packages
@@ -529,6 +523,13 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.camera.tnr.preview=0 \
     persist.camera.tnr.video=0
 
+# Enable camera EIS		
+# eis.enable: enables electronic image stabilization		
+# is_type: sets image stabilization type
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.camera.eis.enable=1 \
+    persist.camera.is_type=4
+
 # Incoming number (b/23529711)
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.radio.redir_party_num=0
@@ -604,6 +605,23 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.facelock.det_timeout=2500 \
     ro.facelock.rec_timeout=3500 \
     ro.facelock.est_max_time=600
+
+# WIFI Calling
+# Debug Options
+persist.dbg.ims_volte_enable=1 
+persist.dbg.volte_avail_ovr=1 
+persist.dbg.vt_avail_ovr=1
+persist.dbg.wfc_avail_ovr=1
+
+# Data Options
+# Commented this line out as it was reported to break WiFi calling on some carriers. Not even sure if it's required to begin with.
+persist.data.iwlan.enable=true
+
+# Radio Options
+persist.radio.rat_on=combine
+persist.radio.data_ltd_sys_ind=1
+persist.radio.data_con_rprt=1
+persist.radio.calls.on.ims=1
 
 $(call inherit-product-if-exists, hardware/qcom/msm8994/msm8992.mk)
 $(call inherit-product-if-exists, vendor/qcom/gpu/msm8994/msm8994-gpu-vendor.mk)
