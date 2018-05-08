@@ -31,6 +31,15 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.atrace.core.services=com.google.android.gms,com.google.android.gms.ui,com.google.android.gms.persistent \
     ro.setupwizard.rotation_locked=true \
     ro.opa.eligible_device=true
+		persist.dbg.ims_volte_enable=1 \
+		persist.dbg.volte_avail_ovr=1 \
+		persist.dbg.vt_avail_ovr=1\
+		persist.dbg.wfc_avail_ovr=1
+		persist.data.iwlan.enable=true
+		persist.radio.rat_on=combine \
+		persist.radio.data_ltd_sys_ind=1 \
+		persist.radio.data_con_rprt=1 \
+		persist.radio.calls.on.ims=1
 
 		# Unofficial build ID
 		TARGET_UNOFFICIAL_BUILD_ID := BigStone
