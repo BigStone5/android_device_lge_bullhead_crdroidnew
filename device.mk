@@ -77,6 +77,9 @@ PRODUCT_COPY_FILES += \
 #PRODUCT_PACKAGES += \
 #    BullheadLayout
 
+PRODUCT_PACKAGES += \
+    messaging
+
 # Prebuilt input device calibration files
 PRODUCT_COPY_FILES += \
     device/lge/bullhead/synaptics_rmi4_i2c.idc:system/usr/idc/synaptics_rmi4_i2c.idc
@@ -550,7 +553,10 @@ PRODUCT_PACKAGES += \
 
 #GNSS HAL
 PRODUCT_PACKAGES += \
-    android.hardware.gnss@1.0-impl
+    libgnss \
+    liblocation_api \
+    android.hardware.gnss@1.0-impl-qti \
+    android.hardware.gnss@1.0-service-qti
 
 #USB HAL
 PRODUCT_PACKAGES += \
