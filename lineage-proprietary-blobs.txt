@@ -24,14 +24,12 @@
 -app/TimeService/TimeService.apk
 -app/Tycho/Tycho.apk;PRESIGNED
 -priv-app/atfwd/atfwd.apk
--priv-app/CarrierServices/CarrierServices.apk;PRESIGNED
 -priv-app/CNEService/CNEService.apk
 -priv-app/ConnMO/ConnMO.apk
 -priv-app/DCMO/DCMO.apk
 -priv-app/DiagMon/DiagMon.apk
 -priv-app/DMConfigUpdate/DMConfigUpdate.apk
 -priv-app/DMService/DMService.apk
--priv-app/GCS/GCS.apk;PRESIGNED
 -priv-app/HotwordEnrollmentOKGoogleWCD9330/HotwordEnrollmentOKGoogleWCD9330.apk;PRESIGNED
 -priv-app/HotwordEnrollmentTGoogleWCD9330/HotwordEnrollmentTGoogleWCD9330.apk;PRESIGNED
 -priv-app/HotwordEnrollmentXGoogleWCD9330/HotwordEnrollmentXGoogleWCD9330.apk;PRESIGNED
@@ -97,9 +95,7 @@ etc/thermal-engine-8992.conf
 -framework/rcsimssettings.jar;PRESIGNED
 -framework/rcsservice.jar;PRESIGNED
 lib/libdmengine.so
-lib/libdmengine.so:priv-app/DMService/lib/arm/libdmengine.so
 lib/libdmjavaplugin.so
-lib/libdmjavaplugin.so:priv-app/DMService/lib/arm/libdmjavaplugin.so
 lib/libloc_api_v02.so
 lib/libloc_ds_api.so
 lib64/libloc_api_v02.so
