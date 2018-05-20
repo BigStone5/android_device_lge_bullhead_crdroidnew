@@ -553,10 +553,7 @@ PRODUCT_PACKAGES += \
 
 #GNSS HAL
 PRODUCT_PACKAGES += \
-    libgnss \
-    liblocation_api \
-    android.hardware.gnss@1.0-impl-qti \
-    android.hardware.gnss@1.0-service-qti
+    android.hardware.gnss@1.0-impl
 
 #USB HAL
 PRODUCT_PACKAGES += \
